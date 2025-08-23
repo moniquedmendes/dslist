@@ -2,8 +2,6 @@ package com.mendesmonique.dslist.dto;
 
 import com.mendesmonique.dslist.entities.Game;
 
-import jakarta.persistence.Column;
-
 
 public class GameMinDTO {
 	private Long id;
