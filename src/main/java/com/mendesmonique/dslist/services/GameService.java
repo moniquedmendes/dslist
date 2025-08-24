@@ -17,7 +17,7 @@ public class GameService {
 
 	@Autowired
 	private GameRepository gameRepository;
-	
+
 	@Transactional(readOnly = true)
 	public GameDTO findById(Long Id) {
 		Game result = gameRepository.findById(Id).get();
@@ -35,4 +35,6 @@ public class GameService {
 		List<GameMinProjection> result = gameRepository.searchByList(listId);
 		return result.stream().map(x -> new GameMinDTO(x)).toList();		
 	}
+	
+
 }
